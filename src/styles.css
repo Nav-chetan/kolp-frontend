@@ -1,0 +1,123 @@
+/* Supercharged KOLP UI Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #f1f1f1;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+    animation: fadeSlide 1s ease;
+  }
+  
+  nav a {
+    color: #f1f1f1;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #ff9a9e;
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  nav a:hover {
+    color: #ff9a9e;
+    text-shadow: 0 0 6px #ff9a9e;
+  }
+  
+  main, form, .page {
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 800px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    animation: fadeSlide 1s ease forwards;
+  }
+  
+  form input, form select, form button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  form input:focus, form select:focus {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 8px #ff9a9e;
+  }
+  
+  form button {
+    background: #ff758c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff758c;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 0.95rem;
+    margin-top: 60px;
+    color: #ddd;
+  }
+  
+  @keyframes fadeSlide {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
